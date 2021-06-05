@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import user from '../assets/images/user.png';
 
 // Icons
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 
-function Header() {
+// moment
+import moment from "moment";
+
+const Header = () => {
+
+    
     return (
         <header>
             <div class="left-header">
@@ -20,7 +25,7 @@ function Header() {
                     <h4>
                         Balances
                     </h4>
-                    <p>Today, 23 March 1984</p>
+                    <p>Today, {moment().format("DD-MM-YYYY")}</p>
                 </div>
             </div>
 
